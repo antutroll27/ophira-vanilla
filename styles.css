@@ -1,0 +1,43 @@
+:root {
+  font-family: 'DM Sans', sans-serif;
+  --color-brand-green: #ccf32f;
+  --color-brand-dark: #0a0a0a;
+  --color-brand-gray: #f5f5f5;
+}
+
+h1, h2 {
+  font-family: 'Anybody', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Smooth fade for accordion */
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.fade-enter-from, .fade-leave-to {
+  opacity: 0;
+}
+
+/* FAQ transition */
+.faq-content {
+  transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.faq-content.hidden {
+  display: none;
+}
+
+.faq-content:not(.hidden) {
+  display: block;
+}
+
