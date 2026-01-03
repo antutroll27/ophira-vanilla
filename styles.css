@@ -19,15 +19,6 @@ button {
   cursor: pointer;
 }
 
-/* Smooth fade for accordion */
-.fade-enter-active, .fade-leave-active {
-  transition: opacity 0.3s ease, height 0.3s ease;
-}
-
-.fade-enter-from, .fade-leave-to {
-  opacity: 0;
-}
-
 /* FAQ transition */
 .faq-content {
   transition: opacity 0.3s ease, height 0.3s ease;
@@ -41,3 +32,14 @@ button {
   display: block;
 }
 
+/* Accessibility: Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
